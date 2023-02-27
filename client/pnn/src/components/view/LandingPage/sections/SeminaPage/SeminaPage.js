@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import "./css/LandingMain.css";
 import "swiper/swiper.css";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Carousel from "react-bootstrap/Carousel";
 import {
     Animator,
@@ -24,6 +24,7 @@ function Semina() {
         "C/C++ 세미나를 통하여 신입생분들의\n프로그래밍 적응과 기초를 쌓아갈 수 있습니다.",
         "자바 세미나를 통하여 2학년 부원들의\n객체지향 프로그래밍 실력을 쌓아갈 수 있습니다.",
         "DB 세미나를 통하여 데이터베이스의\n설계와 기초원리를 배울 수 있습니다.",
+        "협업툴의 세미나를 통하여\n개발자의 기본 소양을 쌓아갑니다.",
     ]);
     return (
         <ScrollContainer>
@@ -39,8 +40,9 @@ function Semina() {
                         MoveOut(0, -400)
                     )}
                 >
-                    <div style={{ fontSize: 40 }}>
-                        P & N <hr></hr>세미나 소개
+                    <div style={{ fontSize: 36 }}>
+                        P & N <hr style={{ height: "10px" }}></hr>
+                        세미나&nbsp;소개
                     </div>
                 </Animator>
             </ScrollPage>
@@ -87,8 +89,16 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[0]}</p>
             </section>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             {/*전공 2*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
@@ -96,7 +106,7 @@ function Semina() {
                         <img
                             width="160vmax"
                             height="100vmax"
-                            src={`${process.env.PUBLIC_URL}/images/logo/java_logo.png`}
+                            src={`${process.env.PUBLIC_URL}/images/logo/Java_logo.png`}
                         />
                     </div>
 
@@ -117,13 +127,20 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[1]}</p>
             </section>
             <br />
             <br />
             <br />
+            <br />
+            <br />
+            <br />
             <MoreVertIcon />
             <div className="seminarText">개발 세미나</div>
+            <br />
             {/*개발 1*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
@@ -165,9 +182,17 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <p className="myPFont">{messages[0]}</p>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[2]}</p>
             </section>
+            <br />
+            <br />
             {/*개발 2*/}
+            <br />
+            <br />
+            <br />
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
                     <div
@@ -213,8 +238,14 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <p className="myPFont">{messages[0]}</p>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[3]}</p>
+                <br />
             </section>
+            <br />
+            <br />
         </ScrollContainer>
     );
 }
