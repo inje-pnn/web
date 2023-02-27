@@ -34,7 +34,7 @@ function Intro() {
     return (
         <div
             className="bg"
-            style={{ paddingTop: "15vmax", backgroundColor: "#fff" }}
+            style={{ paddingTop: "17vmax", backgroundColor: "#fff" }}
         >
             <img
                 src={process.env.PUBLIC_URL + "/images/intro.png"}
@@ -44,7 +44,14 @@ function Intro() {
                     height: "45%",
                 }}
             ></img>
-            <div className="text" style={{ color: "#222", textAlign: "left" }}>
+            <div
+                className="text"
+                style={{
+                    color: "#222",
+                    textAlign: "left",
+                    paddingTop: "1.5vmax",
+                }}
+            >
                 P&N<p className="subTitle">{text}</p>
             </div>
         </div>
@@ -57,20 +64,7 @@ function GuestLandingPage() {
     const [card] = useState(["semina", "team", "etc"]);
     return (
         <div>
-            <ScrollContainer>
-                <ScrollPage>
-                    <Animator
-                        animation={batch(
-                            Move(0, 500),
-                            Fade(),
-                            MoveOut(0, -400)
-                        )}
-                    >
-                        <Intro></Intro>
-                    </Animator>
-                </ScrollPage>
-            </ScrollContainer>
-
+            <Intro></Intro>
             <br />
             <br />
             <br />
@@ -81,7 +75,9 @@ function GuestLandingPage() {
                 style={{
                     margin: "auto",
                     backgroundColor: "transparent",
+                    paddingLeft: "5vmax",
                     display: "flex",
+                    alignContent: "center",
                 }}
             >
                 <Box>
