@@ -20,7 +20,7 @@ import "swiper/css/pagination";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 const text =
-    "Programming을 즐기는 Network라는 뜻을 가진 \n인제대학교 컴퓨터공학부 학술 동아리입니다.";
+    "Programming을 즐기는 Network라는 뜻을 가진 \n인제대학교 컴퓨터공학과 학술 동아리입니다.";
 
 function Intro() {
     return (
