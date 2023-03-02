@@ -222,8 +222,6 @@ function TeamProjectPage() {
                     <span style={{ fontSize: 22 }}>
                         <br />
                         실무에서 활용되는 <br /> 노션 깃허브 슬랙을 통한 협업
-                        <br />
-                        <br />
                     </span>
                     <br />
                     <br />

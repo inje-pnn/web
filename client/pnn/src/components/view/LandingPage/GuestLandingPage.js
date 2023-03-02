@@ -7,20 +7,12 @@ import { GroupsOutlined, SchoolOutlined } from "@mui/icons-material";
 import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import { experimentalStyled as styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-
-import {
-    Animator,
-    ScrollContainer,
-    ScrollPage,
-    batch,
-    Fade,
-    Move,
-    MoveOut,
-    Sticky,
-} from "react-scroll-motion";
 
 import "swiper/swiper.css";
 import "swiper/css/navigation";
@@ -40,8 +32,8 @@ function Intro() {
                 src={process.env.PUBLIC_URL + "/images/intro.png"}
                 className="video"
                 style={{
-                    width: "90%",
-                    height: "45%",
+                    width: "80%",
+                    height: "40%",
                 }}
             ></img>
             <div
@@ -70,21 +62,20 @@ function GuestLandingPage() {
             <br />
             <p className="activity">Activity</p>
             <EtcPage style={{ backgroundColor: "#ffffff" }} />
-            <div
-                className="card"
-                style={{
-                    margin: "auto",
-                    backgroundColor: "transparent",
-                    paddingLeft: "5vmax",
-                    display: "flex",
-                    alignContent: "center",
-                }}
-            >
+
+            <div className="card">
                 <Box>
-                    <Grid container spacing={4}>
+                    <Grid
+                        container
+                        spacing={{ xs: 2, md: 8 }}
+                        columns={{ xs: 4, sm: 8, md: 12 }}
+                        style={{
+                            display: "flex",
+                        }}
+                    >
                         {card.map((a, i) => {
                             return (
-                                <Grid item lg={4} md={6} xs={1.3} key={i}>
+                                <Grid item lg={4} md={4} xs={4} key={i}>
                                     <GuestCard
                                         cardTitle={cardTitle}
                                         img={img}
@@ -109,7 +100,7 @@ export default GuestLandingPage;
 function GuestCard(props) {
     let navigate = useNavigate();
     return (
-        <Card sx={{ maxWidth: 700 }}>
+        <Card>
             <CardActionArea
                 onClick={() => {
                     if (props.i === 0) {
